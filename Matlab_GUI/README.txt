@@ -1,7 +1,7 @@
 ===========================================================================
 Matlab software implementation for:
     Fluorescence lifetime analysis of smFRET with the contribution of PIFE on donor and acceptor
-     (2022)
+     (2023)
 ===========================================================================
  
 Copyright (C) 2023, Sina Jazani and Taekjip Ha
