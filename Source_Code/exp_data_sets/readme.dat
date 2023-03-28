@@ -1,0 +1,26 @@
+
+1. Each data file contains 5 variables: "photontrajectories," "cumindexall," "donT0," "accT0," and "irfparams."
+
+a. "photontrajectories" contains the records of photon arrivals.
+    The first column is bin indices (1 ms bin).
+    The second column is macro arrival times in millisecond.
+    The third column is the delay times from the laser excitation in 2 ps.
+    The last column is photon colors. 1: acceptor, and 2: donor.
+
+b. "cumindexall" separates the combined "photontrajectories" into individual molecular trajectories.
+    For example, the photon trajectory of molecule 1 is photontrajectories(cumindexall(1)+1:cumindexall(2)).
+    The photon trajectory of molecule n can be extracted as photontrajectories(cumindexall(n)+1:cumindexall(n+1)).
+
+c. "donT0" is the time origin of the delay time of donor photons (column 3 in the data) in 40 ps resolution.
+    In other words, multiply 40 ps to this value. (sorry for the various inconsistent time scales)
+    Mean IRF delay time should be added to this time origin, which is "irfoff" obtained from fitting of IRF (see e).
+
+d. "accT0" is the time origin of the delay time of acceptor photons in 40 ps resolution.
+
+e. "irfparams" is the fitting parameters of the instrument response function.
+    Rows are second and third parameters and columns are acceptor and donor channels.
+    The data and fitting routines (irfdatafit.m) are also included.
+    The data was processed in 40 ps resolution. This is the reason that donT0 and accT0 were obtained in 40 ps.
+
+2. Finally, a3D data were collected in 4 different experiments and the data and other parameters except for irfparams
+   consist of 4 sets. "photontrajectories" has 4 cell arrays.
