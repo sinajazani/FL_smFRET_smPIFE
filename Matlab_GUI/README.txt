@@ -1,5 +1,5 @@
 ===========================================================================
-Matlab software implementation for:
+MATLAB software implementation for:
     Fluorescence lifetime analysis of smFRET with the contribution of PIFE on donor and acceptor
      (2023)
 ===========================================================================
@@ -27,7 +27,7 @@ Setup and Usage
 2) For further details or to report bugs contact:
     sjazani1@jhu.edu or 
 
-3) This software (source code and the app) has been developed in Matlab R2022a.
+3) This software (source code and the app) has been developed in MATLAB R2022a.
 
  
 ===========================================================================
